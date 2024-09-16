@@ -7,6 +7,8 @@ use yii\base\NotSupportedException;
 use yii\db\ActiveRecord;
 use yii\web\IdentityInterface;
 use yii\base\Exception;
+use app\helpers\JwtHelper;
+
 
 class User extends ActiveRecord implements IdentityInterface
 {
@@ -32,12 +34,18 @@ class User extends ActiveRecord implements IdentityInterface
 
     public static function findIdentityByAccessToken($token, $type = null)
     {
-        return self::find()->andWhere(['auth_key' => $token])->one();
+        $decoded = JwtHelper::validateToken($token);
+
+        if ($decoded && isset($decoded->data->user_id)) {
+            return self::findOne($decoded->data->user_id);
+        }
+
+        return null;
     }
 
     public static function findByUsername($username)
     {
-        return self::find()->andWhere(['username' => $username])->one();
+        return self::findOne(['username' => $username]);
     }
 
     public function getId()
@@ -45,14 +53,15 @@ class User extends ActiveRecord implements IdentityInterface
         return $this->id;
     }
 
+    // Auth Key is not being used, cuz we are utiling JWT 
     public function getAuthKey()
     {
-        return $this->auth_key;
+        return null;
     }
 
     public function validateAuthKey($authKey)
     {
-        return $this->auth_key === $authKey;
+        return false;
     }
 
     public function validatePassword($password)

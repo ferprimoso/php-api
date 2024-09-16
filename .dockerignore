@@ -1,0 +1,23 @@
+# Docker Files
+Dockerfile
+docker-compose.yml
+
+# Git files
+.git
+.gitignore
+
+# misc files
+*.log
+*.tmp
+*.swp
+*.swo
+
+# vendor
+vendor
+
+# cache
+composer-cache
+
+# ide
+.idea
+.vscode

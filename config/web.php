@@ -15,22 +15,22 @@ $config = [
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
             'cookieValidationKey' => '4azEunxxuvTLLY6B_3bSX1SBt6vpHSdV',
+            'parsers' => [
+                'application/json' => 'yii\web\JsonParser',
+            ]
+        ],
+        'response' => [
+            'format' => yii\web\Response::FORMAT_JSON,
         ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
         ],
         'user' => [
             'identityClass' => 'app\models\User',
-            'enableAutoLogin' => true,
+            'enableAutoLogin' => false,
         ],
         'errorHandler' => [
-            'errorAction' => 'site/error',
-        ],
-        'mailer' => [
-            'class' => \yii\symfonymailer\Mailer::class,
-            'viewPath' => '@app/mail',
-            // send all mails to a file by default.
-            'useFileTransport' => true,
+            'errorAction' => 'api/error', // or the path to your error handling action
         ],
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,
@@ -46,7 +46,22 @@ $config = [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
+                'image/upload' => 'image/upload',
+                'POST login' => 'login/login',  
+                ['class' => 'yii\rest\UrlRule', 'controller' => 'customer'],
+                ['class' => 'yii\rest\UrlRule', 'controller' => 'book'],
             ],
+        ],
+    ],
+    // AUTH 
+    'as beforeRequest' => [
+        'class' => \yii\filters\auth\CompositeAuth::class,
+        'authMethods' => [
+            \yii\filters\auth\HttpBearerAuth::class,
+        ],
+        'except' => [
+            'login/login', // Public route for login
+            'login/refresh-token', // Public route for token refresh
         ],
     ],
     'params' => $params,

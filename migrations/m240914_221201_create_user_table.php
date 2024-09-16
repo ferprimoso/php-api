@@ -17,7 +17,7 @@ class m240914_221201_create_user_table extends Migration
             'username' => $this->string()->notNull()->unique(),
             'password' => $this->string()->notNull(),
             'name' => $this->string()->notNull(),
-            'auth_key' => $this->string(32),
+            'refresh_token' => $this->text()->null(), // Add refresh token column
         ]);
     }
 

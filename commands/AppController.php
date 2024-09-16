@@ -12,7 +12,8 @@ use yii\console\Controller;
 use yii\console\ExitCode;
 use app\models\User;
 use yii\base\Exception;
-
+use Faker\Factory as FakerFactory;
+use app\models\Book;
 
 /**
  * This command echoes the first argument that you have entered.
@@ -30,7 +31,6 @@ class AppController extends Controller
         $user->username = $username;
         $user->setPassword($password); // Hash the password
         $user->name = $name;
-        $user->auth_key = Yii::$app->security->generateRandomString(); // Optional: generate an auth key
 
         if ($user->save()) {
             echo "User created successfully.\n";
@@ -38,5 +38,25 @@ class AppController extends Controller
             echo "Failed to create user.\n";
             print_r($user->errors);
         }
+    }
+
+    public function actionSeedBooks($count = 100)
+    {
+        $faker = FakerFactory::create();
+
+        for ($i = 0; $i < $count; $i++) {
+            $book = new Book();
+            $book->isbn = $faker->isbn13;
+            $book->title = $faker->sentence(3);
+            $book->author = $faker->name;
+            $book->price = $faker->randomFloat(2, 5, 100);
+            $book->stock = $faker->numberBetween(1, 100);
+
+            if (!$book->save()) {
+                echo "Failed to save book: " . implode(", ", $book->errors) . "\n";
+            }
+        }
+
+        echo "$count books have been seeded.\n";
     }
 }
