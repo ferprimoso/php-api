@@ -46,7 +46,6 @@ $config = [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
-                'image/upload' => 'image/upload',
                 'POST login' => 'login/login',  
                 ['class' => 'yii\rest\UrlRule', 'controller' => 'customer'],
                 ['class' => 'yii\rest\UrlRule', 'controller' => 'book'],
