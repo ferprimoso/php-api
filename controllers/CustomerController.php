@@ -42,15 +42,42 @@ class CustomerController extends ActiveController
                 // Apply limit and offset
                 $query->limit($limit)->offset($offset);
 
+
                 // Apply sorting if provided
                 if (isset($params['sort'])) {
                     $sort = $params['sort'];
-                    $query->orderBy($sort);
+                    $columns = array_keys(Customer::getTableSchema()->columns); // Get existing columns from the schema
+
+                    // Validate each sort column
+                    foreach (explode(',', $sort) as $sortPart) {
+                        $sortPart = trim($sortPart);
+                        $direction = SORT_ASC;
+                        // Use ':' to separate column and direction
+                        if (strpos($sortPart, ':') !== false) {
+                            list($column, $dir) = explode(':', $sortPart);
+                            $column = trim($column);
+                            $dir = trim(strtoupper($dir));
+                            if ($dir === 'DESC') {
+                                $direction = SORT_DESC;
+                            } elseif ($dir !== 'ASC') {
+                                // Default to ASC if the direction is not recognized
+                                $direction = SORT_ASC;
+                            }
+                        } else {
+                            $column = trim($sortPart);
+                        }
+
+                        if (in_array($column, $columns)) {
+                            $query->addOrderBy([$column => $direction]);
+                        } else {
+                            throw new BadRequestHttpException("Invalid sort column: $column");
+                        }
+                    }
                 } else {
                     // Default sorting if not specified
                     $query->orderBy('id ASC');
                 }
-
+                
                 // Apply filtering if provided
                 if (isset($params['filter'])) {
                     $columns = array_keys(Customer::getTableSchema()->columns); // Get existing columns from the schema
@@ -70,13 +97,7 @@ class CustomerController extends ActiveController
             }
         ];
 
-      
-        /*  // Define a custom 'create' action
-         $actions['create'] = [
-            'class' => 'app\actions\CreateCustomerAction',
-            'modelClass' => $this->modelClass,
-        ];
- */
+        // Unset do define custom action
         unset($actions['create']);
  
         return $actions;

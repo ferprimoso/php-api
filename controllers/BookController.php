@@ -32,8 +32,6 @@ class BookController extends ActiveController
             'modelClass' => $this->modelClass,
             'prepareDataProvider' => function () {
                 $query = Book::find();
-                
-                // Retrieve parameters from query
                 $params = \Yii::$app->request->queryParams;
                 $limit = isset($params['limit']) ? (int)$params['limit'] : 10;
                 $offset = isset($params['offset']) ? (int)$params['offset'] : 0;
@@ -50,23 +48,32 @@ class BookController extends ActiveController
                     foreach (explode(',', $sort) as $sortPart) {
                         $sortPart = trim($sortPart);
                         $direction = SORT_ASC;
-                        if (preg_match('/^(.*?)(\s+DESC)?$/i', $sortPart, $matches)) {
-                            $column = $matches[1];
-                            if (isset($matches[2])) {
+                        // Use ':' to separate column and direction
+                        if (strpos($sortPart, ':') !== false) {
+                            list($column, $dir) = explode(':', $sortPart);
+                            $column = trim($column);
+                            $dir = trim(strtoupper($dir));
+                            if ($dir === 'DESC') {
                                 $direction = SORT_DESC;
+                            } elseif ($dir !== 'ASC') {
+                                // Default to ASC if the direction is not recognized
+                                $direction = SORT_ASC;
                             }
+                        } else {
+                            $column = trim($sortPart);
+                        }
 
-                            if (in_array($column, $columns)) {
-                                $query->addOrderBy([$column => $direction]);
-                            } else {
-                                throw new BadRequestHttpException("Invalid sort column: $column");
-                            }
+                        if (in_array($column, $columns)) {
+                            $query->addOrderBy([$column => $direction]);
+                        } else {
+                            throw new BadRequestHttpException("Invalid sort column: $column");
                         }
                     }
                 } else {
                     // Default sorting if not specified
                     $query->orderBy('id ASC');
                 }
+
 
                 // Apply filtering if provided
                 if (isset($params['filter'])) {

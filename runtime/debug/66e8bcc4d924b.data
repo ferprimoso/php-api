@@ -1,0 +1,71 @@
+a:10:{s:6:"config";s:1416:"a:5:{s:10:"phpVersion";s:6:"8.2.23";s:10:"yiiVersion";s:6:"2.0.51";s:11:"application";a:8:{s:3:"yii";s:6:"2.0.51";s:4:"name";s:14:"My Application";s:7:"version";s:3:"1.0";s:8:"language";s:5:"en-US";s:14:"sourceLanguage";s:5:"en-US";s:7:"charset";s:5:"UTF-8";s:3:"env";s:3:"dev";s:5:"debug";b:1;}s:3:"php";a:5:{s:7:"version";s:6:"8.2.23";s:6:"xdebug";b:0;s:3:"apc";b:0;s:8:"memcache";b:0;s:9:"memcached";b:0;}s:10:"extensions";a:5:{s:18:"yiisoft/yii2-faker";a:3:{s:4:"name";s:18:"yiisoft/yii2-faker";s:7:"version";s:7:"2.0.5.0";s:5:"alias";a:1:{s:10:"@yii/faker";s:34:"/app/vendor/yiisoft/yii2-faker/src";}}s:18:"yiisoft/yii2-debug";a:3:{s:4:"name";s:18:"yiisoft/yii2-debug";s:7:"version";s:8:"2.1.25.0";s:5:"alias";a:1:{s:10:"@yii/debug";s:34:"/app/vendor/yiisoft/yii2-debug/src";}}s:23:"yiisoft/yii2-bootstrap5";a:4:{s:4:"name";s:23:"yiisoft/yii2-bootstrap5";s:7:"version";s:7:"2.0.4.0";s:5:"alias";a:1:{s:15:"@yii/bootstrap5";s:39:"/app/vendor/yiisoft/yii2-bootstrap5/src";}s:9:"bootstrap";s:40:"yii\bootstrap5\i18n\TranslationBootstrap";}s:16:"yiisoft/yii2-gii";a:3:{s:4:"name";s:16:"yiisoft/yii2-gii";s:7:"version";s:7:"2.2.6.0";s:5:"alias";a:1:{s:8:"@yii/gii";s:32:"/app/vendor/yiisoft/yii2-gii/src";}}s:26:"yiisoft/yii2-symfonymailer";a:3:{s:4:"name";s:26:"yiisoft/yii2-symfonymailer";s:7:"version";s:7:"2.0.4.0";s:5:"alias";a:1:{s:18:"@yii/symfonymailer";s:42:"/app/vendor/yiisoft/yii2-symfonymailer/src";}}}}";s:3:"log";s:2870:"a:1:{s:8:"messages";a:13:{i:0;a:6:{i:0;s:68:"Bootstrap with yii\bootstrap5\i18n\TranslationBootstrap::bootstrap()";i:1;i:8;i:2;s:31:"yii\base\Application::bootstrap";i:3;d:1726528708.88178;i:4;a:0:{}i:5;i:896000;}i:1;a:6:{i:0;s:33:"Bootstrap with yii\log\Dispatcher";i:1;i:8;i:2;s:31:"yii\base\Application::bootstrap";i:3;d:1726528708.883303;i:4;a:0:{}i:5;i:900672;}i:2;a:6:{i:0;s:19:"Loading module: gii";i:1;i:8;i:2;s:26:"yii\base\Module::getModule";i:3;d:1726528708.883306;i:4;a:0:{}i:5;i:900936;}i:3;a:6:{i:0;s:42:"Bootstrap with yii\gii\Module::bootstrap()";i:1;i:8;i:2;s:31:"yii\base\Application::bootstrap";i:3;d:1726528708.883575;i:4;a:0:{}i:5;i:902216;}i:4;a:6:{i:0;s:21:"Loading module: debug";i:1;i:8;i:2;s:26:"yii\base\Module::getModule";i:3;d:1726528708.883578;i:4;a:0:{}i:5;i:903232;}i:5;a:6:{i:0;s:44:"Bootstrap with yii\debug\Module::bootstrap()";i:1;i:8;i:2;s:31:"yii\base\Application::bootstrap";i:3;d:1726528708.888839;i:4;a:0:{}i:5;i:1057256;}i:6;a:6:{i:0;s:26:"Route to run: app/add-user";i:1;i:8;i:2;s:30:"yii\base\Controller::runAction";i:3;d:1726528708.895406;i:4;a:0:{}i:5;i:1132968;}i:7;a:6:{i:0;s:59:"Running action: app\commands\AppController::actionAddUser()";i:1;i:8;i:2;s:36:"yii\base\InlineAction::runWithParams";i:3;d:1726528708.896683;i:4;a:0:{}i:5;i:1202496;}i:8;a:6:{i:0;s:29:"SHOW FULL COLUMNS FROM `user`";i:1;i:4;i:2;s:21:"yii\db\Command::query";i:3;d:1726528708.90403;i:4;a:0:{}i:5;i:1406224;}i:9;a:6:{i:0;s:53:"Opening DB connection: mysql:host=mysql;dbname=yii2db";i:1;i:4;i:2;s:23:"yii\db\Connection::open";i:3;d:1726528708.904047;i:4;a:0:{}i:5;i:1406768;}i:14;a:6:{i:0;s:24:"SHOW CREATE TABLE `user`";i:1;i:4;i:2;s:21:"yii\db\Command::query";i:3;d:1726528708.907441;i:4;a:0:{}i:5;i:1455472;}i:17;a:6:{i:0;s:764:"SELECT
+    `kcu`.`CONSTRAINT_NAME` AS `constraint_name`,
+    `kcu`.`COLUMN_NAME` AS `column_name`,
+    `kcu`.`REFERENCED_TABLE_NAME` AS `referenced_table_name`,
+    `kcu`.`REFERENCED_COLUMN_NAME` AS `referenced_column_name`
+FROM `information_schema`.`REFERENTIAL_CONSTRAINTS` AS `rc`
+JOIN `information_schema`.`KEY_COLUMN_USAGE` AS `kcu` ON
+    (
+        `kcu`.`CONSTRAINT_CATALOG` = `rc`.`CONSTRAINT_CATALOG` OR
+        (`kcu`.`CONSTRAINT_CATALOG` IS NULL AND `rc`.`CONSTRAINT_CATALOG` IS NULL)
+    ) AND
+    `kcu`.`CONSTRAINT_SCHEMA` = `rc`.`CONSTRAINT_SCHEMA` AND
+    `kcu`.`CONSTRAINT_NAME` = `rc`.`CONSTRAINT_NAME`
+WHERE `rc`.`CONSTRAINT_SCHEMA` = database() AND `kcu`.`TABLE_SCHEMA` = database()
+AND `rc`.`TABLE_NAME` = 'user' AND `kcu`.`TABLE_NAME` = 'user'";i:1;i:4;i:2;s:21:"yii\db\Command::query";i:3;d:1726528708.908533;i:4;a:0:{}i:5;i:1458216;}i:20;a:6:{i:0;s:141:"INSERT INTO `user` (`username`, `password`, `name`) VALUES ('mario', '$2y$13$Pp/APT6bh7wM/gfBo58aJO3caCJOSCM8WXC3TyrIuh4LgPCGQKAwa', 'Mario')";i:1;i:4;i:2;s:23:"yii\db\Command::execute";i:3;d:1726528709.275941;i:4;a:0:{}i:5;i:1606056;}}}";s:9:"profiling";s:3248:"a:3:{s:6:"memory";i:2210224;s:4:"time";d:0.40807390213012695;s:8:"messages";a:10:{i:10;a:6:{i:0;s:53:"Opening DB connection: mysql:host=mysql;dbname=yii2db";i:1;i:80;i:2;s:23:"yii\db\Connection::open";i:3;d:1726528708.904048;i:4;a:0:{}i:5;i:1406984;}i:11;a:6:{i:0;s:53:"Opening DB connection: mysql:host=mysql;dbname=yii2db";i:1;i:96;i:2;s:23:"yii\db\Connection::open";i:3;d:1726528708.905951;i:4;a:0:{}i:5;i:1449664;}i:12;a:6:{i:0;s:29:"SHOW FULL COLUMNS FROM `user`";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1726528708.905957;i:4;a:0:{}i:5;i:1450360;}i:13;a:6:{i:0;s:29:"SHOW FULL COLUMNS FROM `user`";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1726528708.907419;i:4;a:0:{}i:5;i:1455904;}i:15;a:6:{i:0;s:24:"SHOW CREATE TABLE `user`";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1726528708.907446;i:4;a:0:{}i:5;i:1456168;}i:16;a:6:{i:0;s:24:"SHOW CREATE TABLE `user`";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1726528708.907963;i:4;a:0:{}i:5;i:1457256;}i:18;a:6:{i:0;s:764:"SELECT
+    `kcu`.`CONSTRAINT_NAME` AS `constraint_name`,
+    `kcu`.`COLUMN_NAME` AS `column_name`,
+    `kcu`.`REFERENCED_TABLE_NAME` AS `referenced_table_name`,
+    `kcu`.`REFERENCED_COLUMN_NAME` AS `referenced_column_name`
+FROM `information_schema`.`REFERENTIAL_CONSTRAINTS` AS `rc`
+JOIN `information_schema`.`KEY_COLUMN_USAGE` AS `kcu` ON
+    (
+        `kcu`.`CONSTRAINT_CATALOG` = `rc`.`CONSTRAINT_CATALOG` OR
+        (`kcu`.`CONSTRAINT_CATALOG` IS NULL AND `rc`.`CONSTRAINT_CATALOG` IS NULL)
+    ) AND
+    `kcu`.`CONSTRAINT_SCHEMA` = `rc`.`CONSTRAINT_SCHEMA` AND
+    `kcu`.`CONSTRAINT_NAME` = `rc`.`CONSTRAINT_NAME`
+WHERE `rc`.`CONSTRAINT_SCHEMA` = database() AND `kcu`.`TABLE_SCHEMA` = database()
+AND `rc`.`TABLE_NAME` = 'user' AND `kcu`.`TABLE_NAME` = 'user'";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1726528708.908538;i:4;a:0:{}i:5;i:1459040;}i:19;a:6:{i:0;s:764:"SELECT
+    `kcu`.`CONSTRAINT_NAME` AS `constraint_name`,
+    `kcu`.`COLUMN_NAME` AS `column_name`,
+    `kcu`.`REFERENCED_TABLE_NAME` AS `referenced_table_name`,
+    `kcu`.`REFERENCED_COLUMN_NAME` AS `referenced_column_name`
+FROM `information_schema`.`REFERENTIAL_CONSTRAINTS` AS `rc`
+JOIN `information_schema`.`KEY_COLUMN_USAGE` AS `kcu` ON
+    (
+        `kcu`.`CONSTRAINT_CATALOG` = `rc`.`CONSTRAINT_CATALOG` OR
+        (`kcu`.`CONSTRAINT_CATALOG` IS NULL AND `rc`.`CONSTRAINT_CATALOG` IS NULL)
+    ) AND
+    `kcu`.`CONSTRAINT_SCHEMA` = `rc`.`CONSTRAINT_SCHEMA` AND
+    `kcu`.`CONSTRAINT_NAME` = `rc`.`CONSTRAINT_NAME`
+WHERE `rc`.`CONSTRAINT_SCHEMA` = database() AND `kcu`.`TABLE_SCHEMA` = database()
+AND `rc`.`TABLE_NAME` = 'user' AND `kcu`.`TABLE_NAME` = 'user'";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1726528708.909591;i:4;a:0:{}i:5;i:1460304;}i:21;a:6:{i:0;s:141:"INSERT INTO `user` (`username`, `password`, `name`) VALUES ('mario', '$2y$13$Pp/APT6bh7wM/gfBo58aJO3caCJOSCM8WXC3TyrIuh4LgPCGQKAwa', 'Mario')";i:1;i:80;i:2;s:23:"yii\db\Command::execute";i:3;d:1726528709.275948;i:4;a:0:{}i:5;i:1606760;}i:22;a:6:{i:0;s:141:"INSERT INTO `user` (`username`, `password`, `name`) VALUES ('mario', '$2y$13$Pp/APT6bh7wM/gfBo58aJO3caCJOSCM8WXC3TyrIuh4LgPCGQKAwa', 'Mario')";i:1;i:96;i:2;s:23:"yii\db\Command::execute";i:3;d:1726528709.280581;i:4;a:0:{}i:5;i:1607176;}}}";s:2:"db";s:2855:"a:1:{s:8:"messages";a:8:{i:12;a:6:{i:0;s:29:"SHOW FULL COLUMNS FROM `user`";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1726528708.905957;i:4;a:0:{}i:5;i:1450360;}i:13;a:6:{i:0;s:29:"SHOW FULL COLUMNS FROM `user`";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1726528708.907419;i:4;a:0:{}i:5;i:1455904;}i:15;a:6:{i:0;s:24:"SHOW CREATE TABLE `user`";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1726528708.907446;i:4;a:0:{}i:5;i:1456168;}i:16;a:6:{i:0;s:24:"SHOW CREATE TABLE `user`";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1726528708.907963;i:4;a:0:{}i:5;i:1457256;}i:18;a:6:{i:0;s:764:"SELECT
+    `kcu`.`CONSTRAINT_NAME` AS `constraint_name`,
+    `kcu`.`COLUMN_NAME` AS `column_name`,
+    `kcu`.`REFERENCED_TABLE_NAME` AS `referenced_table_name`,
+    `kcu`.`REFERENCED_COLUMN_NAME` AS `referenced_column_name`
+FROM `information_schema`.`REFERENTIAL_CONSTRAINTS` AS `rc`
+JOIN `information_schema`.`KEY_COLUMN_USAGE` AS `kcu` ON
+    (
+        `kcu`.`CONSTRAINT_CATALOG` = `rc`.`CONSTRAINT_CATALOG` OR
+        (`kcu`.`CONSTRAINT_CATALOG` IS NULL AND `rc`.`CONSTRAINT_CATALOG` IS NULL)
+    ) AND
+    `kcu`.`CONSTRAINT_SCHEMA` = `rc`.`CONSTRAINT_SCHEMA` AND
+    `kcu`.`CONSTRAINT_NAME` = `rc`.`CONSTRAINT_NAME`
+WHERE `rc`.`CONSTRAINT_SCHEMA` = database() AND `kcu`.`TABLE_SCHEMA` = database()
+AND `rc`.`TABLE_NAME` = 'user' AND `kcu`.`TABLE_NAME` = 'user'";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1726528708.908538;i:4;a:0:{}i:5;i:1459040;}i:19;a:6:{i:0;s:764:"SELECT
+    `kcu`.`CONSTRAINT_NAME` AS `constraint_name`,
+    `kcu`.`COLUMN_NAME` AS `column_name`,
+    `kcu`.`REFERENCED_TABLE_NAME` AS `referenced_table_name`,
+    `kcu`.`REFERENCED_COLUMN_NAME` AS `referenced_column_name`
+FROM `information_schema`.`REFERENTIAL_CONSTRAINTS` AS `rc`
+JOIN `information_schema`.`KEY_COLUMN_USAGE` AS `kcu` ON
+    (
+        `kcu`.`CONSTRAINT_CATALOG` = `rc`.`CONSTRAINT_CATALOG` OR
+        (`kcu`.`CONSTRAINT_CATALOG` IS NULL AND `rc`.`CONSTRAINT_CATALOG` IS NULL)
+    ) AND
+    `kcu`.`CONSTRAINT_SCHEMA` = `rc`.`CONSTRAINT_SCHEMA` AND
+    `kcu`.`CONSTRAINT_NAME` = `rc`.`CONSTRAINT_NAME`
+WHERE `rc`.`CONSTRAINT_SCHEMA` = database() AND `kcu`.`TABLE_SCHEMA` = database()
+AND `rc`.`TABLE_NAME` = 'user' AND `kcu`.`TABLE_NAME` = 'user'";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1726528708.909591;i:4;a:0:{}i:5;i:1460304;}i:21;a:6:{i:0;s:141:"INSERT INTO `user` (`username`, `password`, `name`) VALUES ('mario', '$2y$13$Pp/APT6bh7wM/gfBo58aJO3caCJOSCM8WXC3TyrIuh4LgPCGQKAwa', 'Mario')";i:1;i:80;i:2;s:23:"yii\db\Command::execute";i:3;d:1726528709.275948;i:4;a:0:{}i:5;i:1606760;}i:22;a:6:{i:0;s:141:"INSERT INTO `user` (`username`, `password`, `name`) VALUES ('mario', '$2y$13$Pp/APT6bh7wM/gfBo58aJO3caCJOSCM8WXC3TyrIuh4LgPCGQKAwa', 'Mario')";i:1;i:96;i:2;s:23:"yii\db\Command::execute";i:3;d:1726528709.280581;i:4;a:0:{}i:5;i:1607176;}}}";s:5:"event";s:2146:"a:12:{i:0;a:5:{s:4:"time";d:1726528708.892642;s:4:"name";s:13:"beforeRequest";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:23:"yii\console\Application";}i:1;a:5:{s:4:"time";d:1726528708.896664;s:4:"name";s:12:"beforeAction";s:5:"class";s:20:"yii\base\ActionEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:23:"yii\console\Application";}i:2;a:5:{s:4:"time";d:1726528708.896674;s:4:"name";s:12:"beforeAction";s:5:"class";s:20:"yii\base\ActionEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:26:"app\commands\AppController";}i:3;a:5:{s:4:"time";d:1726528708.900809;s:4:"name";s:4:"init";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:15:"app\models\User";}i:4;a:5:{s:4:"time";d:1726528708.905947;s:4:"name";s:9:"afterOpen";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:17:"yii\db\Connection";}i:5;a:5:{s:4:"time";d:1726528709.270381;s:4:"name";s:14:"beforeValidate";s:5:"class";s:19:"yii\base\ModelEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:15:"app\models\User";}i:6;a:5:{s:4:"time";d:1726528709.272322;s:4:"name";s:13:"afterValidate";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:15:"app\models\User";}i:7;a:5:{s:4:"time";d:1726528709.272329;s:4:"name";s:12:"beforeInsert";s:5:"class";s:19:"yii\base\ModelEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:15:"app\models\User";}i:8;a:5:{s:4:"time";d:1726528709.280743;s:4:"name";s:11:"afterInsert";s:5:"class";s:21:"yii\db\AfterSaveEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:15:"app\models\User";}i:9;a:5:{s:4:"time";d:1726528709.280832;s:4:"name";s:11:"afterAction";s:5:"class";s:20:"yii\base\ActionEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:26:"app\commands\AppController";}i:10;a:5:{s:4:"time";d:1726528709.280837;s:4:"name";s:11:"afterAction";s:5:"class";s:20:"yii\base\ActionEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:23:"yii\console\Application";}i:11;a:5:{s:4:"time";d:1726528709.280843;s:4:"name";s:12:"afterRequest";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:23:"yii\console\Application";}}";s:4:"mail";s:6:"a:0:{}";s:8:"timeline";s:91:"a:3:{s:5:"start";d:1726528708.875857;s:3:"end";d:1726528709.283955;s:6:"memory";i:2210224;}";s:4:"dump";s:6:"a:0:{}";s:7:"summary";a:13:{s:3:"tag";s:13:"66e8bcc4d924b";s:3:"url";s:45:"php yii app/add-user mario 123456 Mario Silva";s:4:"ajax";i:0;s:6:"method";s:7:"COMMAND";s:2:"ip";s:4:"root";s:4:"time";d:1726528708.869655;s:10:"statusCode";i:0;s:8:"sqlCount";i:4;s:21:"excessiveCallersCount";i:0;s:9:"mailCount";i:0;s:9:"mailFiles";a:0:{}s:10:"peakMemory";i:2210224;s:14:"processingTime";d:0.40807390213012695;}s:10:"exceptions";a:0:{}}

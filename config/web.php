@@ -45,8 +45,10 @@ $config = [
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
+            'enableStrictParsing' => true,
             'rules' => [
-                'POST login' => 'login/login',  
+                'POST login' => 'login/login', 
+                'POST login/refresh-token' => 'login/refresh-token',
                 ['class' => 'yii\rest\UrlRule', 'controller' => 'customer'],
                 ['class' => 'yii\rest\UrlRule', 'controller' => 'book'],
             ],
