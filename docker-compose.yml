@@ -1,6 +1,6 @@
 services:
   yii2:
-    container_name: yii2_api_container  
+    container_name: yii2_api_container
     build: .
     volumes:
       - ~/.composer-docker/cache:/root/.composer/cache:delegated
@@ -16,9 +16,10 @@ services:
       - JWT_SECRET=secret
     depends_on:
       - mysql
+    entrypoint: ["sh", "-c", "composer install --prefer-dist && apache2-foreground"]
 
   mysql:
-    container_name: mysql_container  
+    container_name: mysql_container
     image: mysql:8
     volumes:
       - mysql_data:/var/lib/mysql

@@ -10,12 +10,5 @@ WORKDIR /app
 # Copy your application code into the container
 COPY . /app
 
-# Install PHP dependencies
-RUN composer install --prefer-dist
-
 # Expose port 80
 EXPOSE 80
-
-# Command to run Apache in the foreground
-CMD ["apache2-foreground"]
-

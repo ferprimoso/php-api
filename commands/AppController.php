@@ -15,6 +15,7 @@ use yii\base\Exception;
 use Faker\Factory as FakerFactory;
 use app\models\Book;
 use app\models\Customer;
+use app\helpers\CpfHelper;
 
 
 /**
@@ -70,7 +71,7 @@ class AppController extends Controller
  
          for ($i = 0; $i < $count; $i++) {
              $customer = new Customer();
-             $customer->cpf = $faker->numerify('###########'); 
+             $customer->cpf = CpfHelper::generateValidCPF(); // Generate Valid Fake CPF 
              $customer->cep = $faker->numerify('########');
              $customer->name = $faker->name;
              $customer->street = $faker->streetName;

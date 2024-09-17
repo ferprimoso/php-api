@@ -25,6 +25,8 @@ Para executar os containers Docker em segundo plano, utilize o comando abaixo co
 docker-compose up -d --build
 ```
 
+Ao finalizar de montar e executar os containers, a aplicação estará rodando no localhost:8000
+
 ### 2. Criação de tabelas no banco usando migrations do yii2
 
 Para criar as tabelas do banco basta executar as migrations dentro do container:
@@ -40,6 +42,22 @@ Podemos usar um comando para adicionar um usuário ao banco:
 docker exec -it yii2_api_container ./yii app/add-user <username> <senha> <nome do usuário>
 ```
 Substitua 'username', 'senha', e 'nome do usuário' pelos valores desejados.
+Exemplo:
+
+```bash
+docker exec -it yii2_api_container ./yii app/add-user mario 123456 Mario Silva
+```
+
+### 3. (Opicional) Semear Books e Costumers
+
+Caso deseje colocar dados nas tabelas Books e Costumers para testar as requesições de listagem, basta usar esses comandos:
+
+Semear Books:
+
+```bash
+docker exec -it yii2_api_container ./yii app/add-user <username> <senha> <nome do usuário>
+```
+Semear Customers:
 
 ```bash
 docker exec -it yii2_api_container ./yii app/add-user mario 123456 Mario Silva
