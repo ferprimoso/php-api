@@ -55,12 +55,12 @@ Caso deseje colocar dados nas tabelas Books e Costumers para testar as requesiç
 Semear Books:
 
 ```bash
-docker exec -it yii2_api_container ./yii app/add-user <username> <senha> <nome do usuário>
+docker exec -it yii2_api_container ./yii app/seed-books
 ```
 Semear Customers:
 
 ```bash
-docker exec -it yii2_api_container ./yii app/add-user mario 123456 Mario Silva
+docker exec -it yii2_api_container ./yii app/seed-customers
 ```
 
 ## Rotas de Autenticação
