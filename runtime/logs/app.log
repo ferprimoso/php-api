@@ -126,3 +126,340 @@ $_SERVER = [
     ]
     'argc' => 5
 ]
+2024-09-17 00:50:50 [-][-][-][error][Error] Error: Class "app\commands\Customer" not found in /app/commands/AppController.php:70
+Stack trace:
+#0 [internal function]: app\commands\AppController->actionSeedCustomers(100)
+#1 /app/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#2 /app/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#3 /app/vendor/yiisoft/yii2/console/Controller.php(180): yii\base\Controller->runAction('seed-customers', Array)
+#4 /app/vendor/yiisoft/yii2/base/Module.php(552): yii\console\Controller->runAction('seed-customers', Array)
+#5 /app/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('app/seed-custom...', Array)
+#6 /app/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('app/seed-custom...', Array)
+#7 /app/vendor/yiisoft/yii2/base/Application.php(384): yii\console\Application->handleRequest(Object(yii\console\Request))
+#8 /app/yii(20): yii\base\Application->run()
+#9 {main}
+2024-09-17 00:50:50 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'PATH' => '/app:/app/vendor/bin:/root/.composer/vendor/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'HOSTNAME' => '3f237cce1385'
+    'TERM' => 'linux'
+    'DB_PORT' => '3306'
+    'DB_DATABASE' => 'yii2db'
+    'DB_USERNAME' => 'yii2user'
+    'DB_PASSWORD' => '123456'
+    'JWT_SECRET' => 'secret'
+    'DB_HOST' => 'mysql'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev 		file 		g++ 		gcc 		libc-dev 		make 		pkg-config 		re2c'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'APACHE_CONFDIR' => '/etc/apache2'
+    'APACHE_ENVVARS' => '/etc/apache2/envvars'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'GPG_KEYS' => '39B641343D8C104B2B146DC3F9C39DC0B9698544 E60913E4DF209907D8E30D96659A97C9CF2A795A 1198C0117593497A5EC5C199286AF1F9897469DC'
+    'PHP_VERSION' => '8.2.23'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.2.23.tar.xz'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.2.23.tar.xz.asc'
+    'PHP_SHA256' => '81c5ae6ba44e262a076349ee54a2e468638a4571085d80bff37f6fd308e1d8d5'
+    'PHP_USER_ID' => '33'
+    'COMPOSER_ALLOW_SUPERUSER' => '1'
+    'PHP_ENABLE_XDEBUG' => '0'
+    'HOME' => '/root'
+    'PHP_SELF' => './yii'
+    'SCRIPT_NAME' => './yii'
+    'SCRIPT_FILENAME' => './yii'
+    'PATH_TRANSLATED' => './yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1726534250.86
+    'REQUEST_TIME' => 1726534250
+    'argv' => [
+        0 => './yii'
+        1 => 'app/seed-customers'
+    ]
+    'argc' => 2
+]
+2024-09-17 00:51:35 [-][-][-][error][Error] Error: Class "app\commands\Customer" not found in /app/commands/AppController.php:70
+Stack trace:
+#0 [internal function]: app\commands\AppController->actionSeedCustomers(100)
+#1 /app/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#2 /app/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#3 /app/vendor/yiisoft/yii2/console/Controller.php(180): yii\base\Controller->runAction('seed-customers', Array)
+#4 /app/vendor/yiisoft/yii2/base/Module.php(552): yii\console\Controller->runAction('seed-customers', Array)
+#5 /app/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('app/seed-custom...', Array)
+#6 /app/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('app/seed-custom...', Array)
+#7 /app/vendor/yiisoft/yii2/base/Application.php(384): yii\console\Application->handleRequest(Object(yii\console\Request))
+#8 /app/yii(20): yii\base\Application->run()
+#9 {main}
+2024-09-17 00:51:35 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'PATH' => '/app:/app/vendor/bin:/root/.composer/vendor/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'HOSTNAME' => '3f237cce1385'
+    'TERM' => 'linux'
+    'DB_PORT' => '3306'
+    'DB_DATABASE' => 'yii2db'
+    'DB_USERNAME' => 'yii2user'
+    'DB_PASSWORD' => '123456'
+    'JWT_SECRET' => 'secret'
+    'DB_HOST' => 'mysql'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev 		file 		g++ 		gcc 		libc-dev 		make 		pkg-config 		re2c'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'APACHE_CONFDIR' => '/etc/apache2'
+    'APACHE_ENVVARS' => '/etc/apache2/envvars'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'GPG_KEYS' => '39B641343D8C104B2B146DC3F9C39DC0B9698544 E60913E4DF209907D8E30D96659A97C9CF2A795A 1198C0117593497A5EC5C199286AF1F9897469DC'
+    'PHP_VERSION' => '8.2.23'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.2.23.tar.xz'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.2.23.tar.xz.asc'
+    'PHP_SHA256' => '81c5ae6ba44e262a076349ee54a2e468638a4571085d80bff37f6fd308e1d8d5'
+    'PHP_USER_ID' => '33'
+    'COMPOSER_ALLOW_SUPERUSER' => '1'
+    'PHP_ENABLE_XDEBUG' => '0'
+    'HOME' => '/root'
+    'PHP_SELF' => './yii'
+    'SCRIPT_NAME' => './yii'
+    'SCRIPT_FILENAME' => './yii'
+    'PATH_TRANSLATED' => './yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1726534295.8582
+    'REQUEST_TIME' => 1726534295
+    'argv' => [
+        0 => './yii'
+        1 => 'app/seed-customers'
+    ]
+    'argc' => 2
+]
+2024-09-17 00:52:03 [-][-][-][error][InvalidArgumentException] InvalidArgumentException: Unknown format "cpf" in /app/vendor/fakerphp/faker/src/Faker/Generator.php:743
+Stack trace:
+#0 /app/vendor/fakerphp/faker/src/Faker/Generator.php(708): Faker\Generator->getFormatter('cpf')
+#1 /app/vendor/fakerphp/faker/src/Faker/Generator.php(964): Faker\Generator->format('cpf')
+#2 /app/commands/AppController.php(73): Faker\Generator->__get('cpf')
+#3 [internal function]: app\commands\AppController->actionSeedCustomers(100)
+#4 /app/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#5 /app/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#6 /app/vendor/yiisoft/yii2/console/Controller.php(180): yii\base\Controller->runAction('seed-customers', Array)
+#7 /app/vendor/yiisoft/yii2/base/Module.php(552): yii\console\Controller->runAction('seed-customers', Array)
+#8 /app/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('app/seed-custom...', Array)
+#9 /app/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('app/seed-custom...', Array)
+#10 /app/vendor/yiisoft/yii2/base/Application.php(384): yii\console\Application->handleRequest(Object(yii\console\Request))
+#11 /app/yii(20): yii\base\Application->run()
+#12 {main}
+2024-09-17 00:52:03 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'PATH' => '/app:/app/vendor/bin:/root/.composer/vendor/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'HOSTNAME' => '3f237cce1385'
+    'TERM' => 'linux'
+    'DB_PORT' => '3306'
+    'DB_DATABASE' => 'yii2db'
+    'DB_USERNAME' => 'yii2user'
+    'DB_PASSWORD' => '123456'
+    'JWT_SECRET' => 'secret'
+    'DB_HOST' => 'mysql'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev 		file 		g++ 		gcc 		libc-dev 		make 		pkg-config 		re2c'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'APACHE_CONFDIR' => '/etc/apache2'
+    'APACHE_ENVVARS' => '/etc/apache2/envvars'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'GPG_KEYS' => '39B641343D8C104B2B146DC3F9C39DC0B9698544 E60913E4DF209907D8E30D96659A97C9CF2A795A 1198C0117593497A5EC5C199286AF1F9897469DC'
+    'PHP_VERSION' => '8.2.23'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.2.23.tar.xz'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.2.23.tar.xz.asc'
+    'PHP_SHA256' => '81c5ae6ba44e262a076349ee54a2e468638a4571085d80bff37f6fd308e1d8d5'
+    'PHP_USER_ID' => '33'
+    'COMPOSER_ALLOW_SUPERUSER' => '1'
+    'PHP_ENABLE_XDEBUG' => '0'
+    'HOME' => '/root'
+    'PHP_SELF' => './yii'
+    'SCRIPT_NAME' => './yii'
+    'SCRIPT_FILENAME' => './yii'
+    'PATH_TRANSLATED' => './yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1726534323.7389
+    'REQUEST_TIME' => 1726534323
+    'argv' => [
+        0 => './yii'
+        1 => 'app/seed-customers'
+    ]
+    'argc' => 2
+]
+2024-09-17 00:53:34 [-][-][-][error][yii\db\Exception] PDOException: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'cep' at row 1 in /app/vendor/yiisoft/yii2/db/Command.php:1320
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/db/Command.php(1320): PDOStatement->execute()
+#1 /app/vendor/yiisoft/yii2/db/Command.php(1120): yii\db\Command->internalExecute('INSERT INTO `cu...')
+#2 /app/vendor/yiisoft/yii2/db/Schema.php(431): yii\db\Command->execute()
+#3 /app/vendor/yiisoft/yii2/db/ActiveRecord.php(604): yii\db\Schema->insert('{{%customer}}', Array)
+#4 /app/vendor/yiisoft/yii2/db/ActiveRecord.php(570): yii\db\ActiveRecord->insertInternal(NULL)
+#5 /app/vendor/yiisoft/yii2/db/BaseActiveRecord.php(688): yii\db\ActiveRecord->insert(true, NULL)
+#6 /app/commands/AppController.php(82): yii\db\BaseActiveRecord->save()
+#7 [internal function]: app\commands\AppController->actionSeedCustomers(100)
+#8 /app/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#9 /app/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#10 /app/vendor/yiisoft/yii2/console/Controller.php(180): yii\base\Controller->runAction('seed-customers', Array)
+#11 /app/vendor/yiisoft/yii2/base/Module.php(552): yii\console\Controller->runAction('seed-customers', Array)
+#12 /app/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('app/seed-custom...', Array)
+#13 /app/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('app/seed-custom...', Array)
+#14 /app/vendor/yiisoft/yii2/base/Application.php(384): yii\console\Application->handleRequest(Object(yii\console\Request))
+#15 /app/yii(20): yii\base\Application->run()
+#16 {main}
+
+Next yii\db\Exception: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'cep' at row 1
+The SQL being executed was: INSERT INTO `customer` (`cpf`, `cep`, `name`, `street`, `number`, `city`, `state`, `sex`) VALUES ('97216020193', '77249-2548', 'Prof. Reese Monahan Sr.', 'Enrico Land', '71688', 'Kutchstad', 'NV', 'F') in /app/vendor/yiisoft/yii2/db/Schema.php:676
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/db/Command.php(1325): yii\db\Schema->convertException(Object(PDOException), 'INSERT INTO `cu...')
+#1 /app/vendor/yiisoft/yii2/db/Command.php(1120): yii\db\Command->internalExecute('INSERT INTO `cu...')
+#2 /app/vendor/yiisoft/yii2/db/Schema.php(431): yii\db\Command->execute()
+#3 /app/vendor/yiisoft/yii2/db/ActiveRecord.php(604): yii\db\Schema->insert('{{%customer}}', Array)
+#4 /app/vendor/yiisoft/yii2/db/ActiveRecord.php(570): yii\db\ActiveRecord->insertInternal(NULL)
+#5 /app/vendor/yiisoft/yii2/db/BaseActiveRecord.php(688): yii\db\ActiveRecord->insert(true, NULL)
+#6 /app/commands/AppController.php(82): yii\db\BaseActiveRecord->save()
+#7 [internal function]: app\commands\AppController->actionSeedCustomers(100)
+#8 /app/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#9 /app/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#10 /app/vendor/yiisoft/yii2/console/Controller.php(180): yii\base\Controller->runAction('seed-customers', Array)
+#11 /app/vendor/yiisoft/yii2/base/Module.php(552): yii\console\Controller->runAction('seed-customers', Array)
+#12 /app/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('app/seed-custom...', Array)
+#13 /app/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('app/seed-custom...', Array)
+#14 /app/vendor/yiisoft/yii2/base/Application.php(384): yii\console\Application->handleRequest(Object(yii\console\Request))
+#15 /app/yii(20): yii\base\Application->run()
+#16 {main}
+Additional Information:
+Array
+(
+    [0] => 22001
+    [1] => 1406
+    [2] => Data too long for column 'cep' at row 1
+)
+
+2024-09-17 00:53:34 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'PATH' => '/app:/app/vendor/bin:/root/.composer/vendor/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'HOSTNAME' => '3f237cce1385'
+    'TERM' => 'linux'
+    'DB_PORT' => '3306'
+    'DB_DATABASE' => 'yii2db'
+    'DB_USERNAME' => 'yii2user'
+    'DB_PASSWORD' => '123456'
+    'JWT_SECRET' => 'secret'
+    'DB_HOST' => 'mysql'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev 		file 		g++ 		gcc 		libc-dev 		make 		pkg-config 		re2c'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'APACHE_CONFDIR' => '/etc/apache2'
+    'APACHE_ENVVARS' => '/etc/apache2/envvars'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'GPG_KEYS' => '39B641343D8C104B2B146DC3F9C39DC0B9698544 E60913E4DF209907D8E30D96659A97C9CF2A795A 1198C0117593497A5EC5C199286AF1F9897469DC'
+    'PHP_VERSION' => '8.2.23'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.2.23.tar.xz'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.2.23.tar.xz.asc'
+    'PHP_SHA256' => '81c5ae6ba44e262a076349ee54a2e468638a4571085d80bff37f6fd308e1d8d5'
+    'PHP_USER_ID' => '33'
+    'COMPOSER_ALLOW_SUPERUSER' => '1'
+    'PHP_ENABLE_XDEBUG' => '0'
+    'HOME' => '/root'
+    'PHP_SELF' => './yii'
+    'SCRIPT_NAME' => './yii'
+    'SCRIPT_FILENAME' => './yii'
+    'PATH_TRANSLATED' => './yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1726534414.8889
+    'REQUEST_TIME' => 1726534414
+    'argv' => [
+        0 => './yii'
+        1 => 'app/seed-customers'
+    ]
+    'argc' => 2
+]
+2024-09-17 00:54:09 [-][-][-][error][InvalidArgumentException] InvalidArgumentException: Unknown format "rify" in /app/vendor/fakerphp/faker/src/Faker/Generator.php:743
+Stack trace:
+#0 /app/vendor/fakerphp/faker/src/Faker/Generator.php(708): Faker\Generator->getFormatter('rify')
+#1 /app/vendor/fakerphp/faker/src/Faker/Generator.php(973): Faker\Generator->format('rify', Array)
+#2 /app/commands/AppController.php(74): Faker\Generator->__call('rify', Array)
+#3 [internal function]: app\commands\AppController->actionSeedCustomers(100)
+#4 /app/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#5 /app/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#6 /app/vendor/yiisoft/yii2/console/Controller.php(180): yii\base\Controller->runAction('seed-customers', Array)
+#7 /app/vendor/yiisoft/yii2/base/Module.php(552): yii\console\Controller->runAction('seed-customers', Array)
+#8 /app/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('app/seed-custom...', Array)
+#9 /app/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('app/seed-custom...', Array)
+#10 /app/vendor/yiisoft/yii2/base/Application.php(384): yii\console\Application->handleRequest(Object(yii\console\Request))
+#11 /app/yii(20): yii\base\Application->run()
+#12 {main}
+2024-09-17 00:54:09 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'PATH' => '/app:/app/vendor/bin:/root/.composer/vendor/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'HOSTNAME' => '3f237cce1385'
+    'TERM' => 'linux'
+    'DB_PORT' => '3306'
+    'DB_DATABASE' => 'yii2db'
+    'DB_USERNAME' => 'yii2user'
+    'DB_PASSWORD' => '123456'
+    'JWT_SECRET' => 'secret'
+    'DB_HOST' => 'mysql'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev 		file 		g++ 		gcc 		libc-dev 		make 		pkg-config 		re2c'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'APACHE_CONFDIR' => '/etc/apache2'
+    'APACHE_ENVVARS' => '/etc/apache2/envvars'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'GPG_KEYS' => '39B641343D8C104B2B146DC3F9C39DC0B9698544 E60913E4DF209907D8E30D96659A97C9CF2A795A 1198C0117593497A5EC5C199286AF1F9897469DC'
+    'PHP_VERSION' => '8.2.23'
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.2.23.tar.xz'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.2.23.tar.xz.asc'
+    'PHP_SHA256' => '81c5ae6ba44e262a076349ee54a2e468638a4571085d80bff37f6fd308e1d8d5'
+    'PHP_USER_ID' => '33'
+    'COMPOSER_ALLOW_SUPERUSER' => '1'
+    'PHP_ENABLE_XDEBUG' => '0'
+    'HOME' => '/root'
+    'PHP_SELF' => './yii'
+    'SCRIPT_NAME' => './yii'
+    'SCRIPT_FILENAME' => './yii'
+    'PATH_TRANSLATED' => './yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1726534449.3141
+    'REQUEST_TIME' => 1726534449
+    'argv' => [
+        0 => './yii'
+        1 => 'app/seed-customers'
+    ]
+    'argc' => 2
+]

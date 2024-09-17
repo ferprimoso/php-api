@@ -14,6 +14,8 @@ use app\models\User;
 use yii\base\Exception;
 use Faker\Factory as FakerFactory;
 use app\models\Book;
+use app\models\Customer;
+
 
 /**
  * This command echoes the first argument that you have entered.
@@ -68,8 +70,8 @@ class AppController extends Controller
  
          for ($i = 0; $i < $count; $i++) {
              $customer = new Customer();
-             $customer->cpf = $faker->cpf; // Exemplo, ajuste conforme o formato do CPF no seu modelo
-             $customer->cep = $faker->postcode;
+             $customer->cpf = $faker->numerify('###########'); 
+             $customer->cep = $faker->numerify('########');
              $customer->name = $faker->name;
              $customer->street = $faker->streetName;
              $customer->number = $faker->buildingNumber;
