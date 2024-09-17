@@ -224,6 +224,9 @@ Cria um novo cliente.
 **Obs:** O endereço é validado e preenchidos conforme o CEP. Portanto só será aceitos CEPs validos
 https://brasilapi.com.br/docs#tag/CEP-V2
 
+**Obs:** O CPF é validado for regex. Portanto só será aceitos CPFs validos. Caso deseje gerar um CPF valido para teste:
+https://www.4devs.com.br/gerador_de_cpf
+
 **Exemplo de Requisição:** 
 
 ```makefile
