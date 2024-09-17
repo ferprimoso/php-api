@@ -40,6 +40,7 @@ class AppController extends Controller
         }
     }
 
+    // to populate books
     public function actionSeedBooks($count = 100)
     {
         $faker = FakerFactory::create();
@@ -59,4 +60,28 @@ class AppController extends Controller
 
         echo "$count books have been seeded.\n";
     }
+
+     // Método para popular clientes
+     public function actionSeedCustomers($count = 100)
+     {
+         $faker = FakerFactory::create();
+ 
+         for ($i = 0; $i < $count; $i++) {
+             $customer = new Customer();
+             $customer->cpf = $faker->cpf; // Exemplo, ajuste conforme o formato do CPF no seu modelo
+             $customer->cep = $faker->postcode;
+             $customer->name = $faker->name;
+             $customer->street = $faker->streetName;
+             $customer->number = $faker->buildingNumber;
+             $customer->city = $faker->city;
+             $customer->state = $faker->stateAbbr;
+             $customer->sex = $faker->randomElement(['M', 'F']); // Considerando 'M' para masculino e 'F' para feminino
+ 
+             if (!$customer->save()) {
+                 echo "Failed to save customer: " . implode(", ", $customer->errors) . "\n";
+             }
+         }
+ 
+         echo "$count customers have been seeded.\n";
+     }
 }
