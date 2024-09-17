@@ -50,7 +50,7 @@ docker exec -it yii2_api_container ./yii app/add-user mario 123456 Mario Silva
 
 ### 3. (Opicional) Semear Books e Costumers
 
-Caso deseje colocar dados nas tabelas Books e Costumers para testar as requisições de listagem, basta usar esses comandos:
+Caso deseje colocar dados falso nas tabelas Books e Costumers para testar as requisições de listagem, basta usar esses comandos:
 
 Semear Books:
 
@@ -212,23 +212,25 @@ Authorization: Bearer access_token
 [
   {
     "id": 1,
+    "name": "mario",
     "cpf": "12345678991",
     "cep": "11075330",
-    "name": "mario",
     "street": "rua",
     "number": "02",
     "city": "cidade",
     "state": "RJ",
+    "additional_information": "ap2",
     "sex": "M"
   },
   {
     "id": 2,
+    "name": "outrocliente",
     "cpf": "98765432100",
     "cep": "22050030",
-    "name": "outrocliente",
     "street": "rua exemplo",
     "number": "123",
     "city": "cidadeexemplo",
+    "additional_information": "ap2",
     "state": "SP",
     "sex": "F"
   }
@@ -254,13 +256,14 @@ Authorization: Bearer access_token
 Content-Type: application/json
 
 {
-  "cpf": "12345678991",
+  "name": "nome_teste",
+  "cpf": "70554460076",
   "cep": "11075330",
-  "name": "hseuashue",
-  "street": "as",
-  "number": "as",
-  "city": "as",
-  "state": "XD",
+  "street": "rua_teste",
+  "number": "84",
+  "additional_information": "ap2",
+  "city": "Santos",
+  "state": "SP",
   "sex": "M"
 }
 ```
@@ -269,13 +272,14 @@ Content-Type: application/json
 ```json
 {
   "id": 1,
-  "cpf": "12345678991",
+  "cpf": "70554460076",
   "cep": "11075330",
-  "name": "hseuashue",
-  "street": "as",
+  "name": "nome_teste",
+  "street": "rua_teste",
   "number": "as",
-  "city": "as",
-  "state": "XD",
+  "additional_information": "ap2",
+  "city": "Santos",
+  "state": "SP",
   "sex": "M"
 }
 ```
