@@ -50,7 +50,7 @@ docker exec -it yii2_api_container ./yii app/add-user mario 123456 Mario Silva
 
 ### 3. (Opicional) Semear Books e Costumers
 
-Caso deseje colocar dados nas tabelas Books e Costumers para testar as requesições de listagem, basta usar esses comandos:
+Caso deseje colocar dados nas tabelas Books e Costumers para testar as requisições de listagem, basta usar esses comandos:
 
 Semear Books:
 
